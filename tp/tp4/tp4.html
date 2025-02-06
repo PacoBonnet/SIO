@@ -4,27 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TP3</title>
+    <style>
+        /* Définir la couleur de fond et la police générale */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f9f4; /* Fond vert clair */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Style du menu */
+        nav {
+            background-color: #8bc34a; /* Vert pomme */
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Style des liens */
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        /* Effet au survol des liens */
+        nav a:hover {
+            background-color: #7cb342; /* Un vert plus foncé au survol */
+        }
+
+        /* Style des titres */
+        h1 {
+            text-align: center;
+            color: #388e3c; /* Vert foncé */
+            margin-top: 40px;
+        }
+
+        h2 {
+            color: #388e3c; /* Vert foncé pour les sous-titres */
+        }
+
+        /* Style des sections */
+        .course-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .course-links a {
+            margin: 0 20px;
+            text-align: center;
+        }
+
+        .course-links img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Style des listes */
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            text-align: center;
+        }
+
+        /* Style des liens supplémentaires */
+        .course-links a:hover img {
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
-<nav>
-    <a href="../../main.html">Menu</a>
-    <a href="../tp1/tp1.html">TP1</a>
-    <a href="../tp3/tp3.html">TP3</a>
-    <a href="../tp4/tp4.html">TP4</a>
-</nav>
 
-<div class="course-links">
-    <a href="cours/html.html"><img src="assets/html.png" alt="Cours HTML"></a>
-    <a href="cours/css.html"><img src="assets/css.png" alt="Cours CSS"></a>
-    <a href="cours/js.html"><img src="assets/js.png" alt="Cours JavaScript"></a>
-</div>
+    <nav>
+        <a href="../../main.html">Menu</a>
+        <a href="../tp1/tp1.html">TP1</a>
+        <a href="../tp3/tp3.html">TP3</a>
+        <a href="../tp4/tp4.html">TP4</a>
+    </nav>
 
-<p>Découvrez nos cours pour apprendre les bases du développement web avec HTML, CSS et JavaScript.</p>
+    <div class="course-links">
+        <a href="cours/html.html"><img src="assets/html.png" alt="Cours HTML"></a>
+        <a href="cours/css.html"><img src="assets/css.png" alt="Cours CSS"></a>
+        <a href="cours/js.html"><img src="assets/js.png" alt="Cours JavaScript"></a>
+        <a href="cours/php.html"><img src="assets/php.png" alt="Cours PHP"></a>
+        <a href="cours/database.html"><img src="assets/database.png" alt="Cours Database"></a>
+    </div>
 
-<p>
-    <a href="cours/html.html">1. Cours et TP HTML</a><br>
-    <a href="cours/css.html">2. Cours et TP CSS</a><br>
-    <a href="cours/js.html">3. Cours et TP JS</a>
-</p>
+    <p>Découvrez nos cours pour apprendre les bases du développement web avec HTML, CSS, JavaScript, PHP et bases de données.</p>
+
+    <p>
+        <a href="cours/html.html">1. Cours et TP HTML</a><br>
+        <a href="cours/css.html">2. Cours et TP CSS</a><br>
+        <a href="cours/js.html">3. Cours et TP JS</a><br>
+        <a href="cours/php.html">4. Cours et TP PHP</a><br>
+        <a href="cours/database.html">5. Cours et TP Base de données</a>
+    </p>
+
 </body>
 </html>
+
