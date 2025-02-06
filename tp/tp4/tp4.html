@@ -5,24 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TP3 - Apprentissage du développement Web</title>
     <style>
-        /* Définir la couleur de fond et la police générale */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f9f4; /* Fond vert clair */
+            background-color: #f0f9f4;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Style du menu */
         nav {
-            background-color: #8bc34a; /* Vert pomme */
+            background-color: #8bc34a;
             padding: 15px 0;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Style des liens du menu */
         nav a {
             color: white;
             text-decoration: none;
@@ -33,16 +30,14 @@
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
-        /* Effet au survol des liens */
         nav a:hover {
-            background-color: #7cb342; /* Un vert plus foncé au survol */
-            transform: scale(1.05); /* Agrandir légèrement l'élément */
+            background-color: #7cb342;
+            transform: scale(1.05);
         }
 
-        /* Style des titres */
         h1 {
             text-align: center;
-            color: #388e3c; /* Vert foncé */
+            color: #388e3c;
             margin-top: 40px;
             font-size: 2.5rem;
             text-transform: uppercase;
@@ -52,9 +47,9 @@
             color: #388e3c;
             font-size: 1.5rem;
             margin-top: 20px;
+            text-align: center;
         }
 
-        /* Style des sections */
         .course-links {
             display: flex;
             justify-content: center;
@@ -72,19 +67,13 @@
             width: 120px;
             height: 120px;
             margin-bottom: 10px;
-            object-fit: contain; /* Empêche l'étirement et conserve les proportions */
+            object-fit: contain;
             transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-
-        /* Spécifique pour l'image JS, augmenter la taille */
-        .course-links a[href="cours/js.html"] img {
-            width: 140px; /* Augmenter la taille du logo JS */
-            height: 140px; /* Garder la même proportion */
         }
 
         .course-links a:hover img {
             opacity: 0.8;
-            transform: scale(1.1); /* Agrandir légèrement l'image au survol */
+            transform: scale(1.1);
         }
 
         p {
@@ -95,14 +84,12 @@
             color: #666;
         }
 
-        /* Style des listes */
         ul {
             list-style-type: none;
             padding-left: 0;
             text-align: center;
         }
 
-        /* Style du footer */
         footer {
             text-align: center;
             margin-top: 50px;
@@ -113,8 +100,6 @@
     </style>
 </head>
 <body>
-
-    <!-- Menu de navigation -->
     <nav>
         <a href="../../main.html">Menu</a>
         <a href="../tp1/tp1.html">TP1</a>
@@ -122,20 +107,16 @@
         <a href="../tp4/tp4.html">TP4</a>
     </nav>
 
-    <!-- Titre principal -->
     <h1>Apprendre le développement Web</h1>
 
-    <!-- Liens vers les différents cours -->
     <div class="course-links">
         <a href="cours/html.html"><img src="assets/html.png" alt="Cours HTML"></a>
         <a href="cours/css.html"><img src="assets/css.png" alt="Cours CSS"></a>
         <a href="cours/js.html"><img src="assets/js.png" alt="Cours JavaScript"></a>
     </div>
 
-    <!-- Description du contenu -->
     <p>Découvrez nos cours pour apprendre les bases du développement web avec HTML, CSS, JavaScript</p>
 
-    <!-- Liste des liens vers les cours -->
     <h2>Cours et TP disponibles</h2>
     <ul>
         <li><a href="cours/html.html">1. Cours et TP HTML</a></li>
