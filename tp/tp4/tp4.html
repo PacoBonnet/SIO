@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP3</title>
+    <title>TP3 - Apprentissage du développement Web</title>
     <style>
         /* Définir la couleur de fond et la police générale */
         body {
@@ -11,16 +11,18 @@
             background-color: #f0f9f4; /* Fond vert clair */
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         /* Style du menu */
         nav {
             background-color: #8bc34a; /* Vert pomme */
-            padding: 15px;
+            padding: 15px 0;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Style des liens */
+        /* Style des liens du menu */
         nav a {
             color: white;
             text-decoration: none;
@@ -28,12 +30,13 @@
             font-size: 18px;
             padding: 10px 15px;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         /* Effet au survol des liens */
         nav a:hover {
             background-color: #7cb342; /* Un vert plus foncé au survol */
+            transform: scale(1.05); /* Agrandir légèrement l'élément */
         }
 
         /* Style des titres */
@@ -41,34 +44,48 @@
             text-align: center;
             color: #388e3c; /* Vert foncé */
             margin-top: 40px;
+            font-size: 2.5rem;
+            text-transform: uppercase;
         }
 
         h2 {
-            color: #388e3c; /* Vert foncé pour les sous-titres */
+            color: #388e3c;
+            font-size: 1.5rem;
+            margin-top: 20px;
         }
 
         /* Style des sections */
         .course-links {
             display: flex;
             justify-content: center;
-            margin-top: 30px;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
         }
 
         .course-links a {
-            margin: 0 20px;
             text-align: center;
+            display: block;
         }
 
         .course-links img {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             margin-bottom: 10px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .course-links a:hover img {
+            opacity: 0.8;
+            transform: scale(1.1); /* Agrandir légèrement l'image au survol */
         }
 
         p {
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.8;
             text-align: center;
+            margin-top: 20px;
+            color: #666;
         }
 
         /* Style des listes */
@@ -82,10 +99,20 @@
         .course-links a:hover img {
             opacity: 0.8;
         }
+
+        /* Style du footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 15px;
+            background-color: #388e3c;
+            color: white;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Menu de navigation -->
     <nav>
         <a href="../../main.html">Menu</a>
         <a href="../tp1/tp1.html">TP1</a>
@@ -93,24 +120,35 @@
         <a href="../tp4/tp4.html">TP4</a>
     </nav>
 
+    <!-- Titre principal -->
+    <h1>Apprendre le développement Web</h1>
+
+    <!-- Liens vers les différents cours -->
     <div class="course-links">
         <a href="cours/html.html"><img src="assets/html.png" alt="Cours HTML"></a>
         <a href="cours/css.html"><img src="assets/css.png" alt="Cours CSS"></a>
         <a href="cours/js.html"><img src="assets/js.png" alt="Cours JavaScript"></a>
         <a href="cours/php.html"><img src="assets/php.png" alt="Cours PHP"></a>
-        <a href="cours/database.html"><img src="assets/database.png" alt="Cours Database"></a>
+        <a href="cours/database.html"><img src="assets/database.png" alt="Cours Base de données"></a>
     </div>
 
-    <p>Découvrez nos cours pour apprendre les bases du développement web avec HTML, CSS, JavaScript, PHP et bases de données.</p>
+    <!-- Description du contenu -->
+    <p>Découvrez nos cours pour apprendre les bases du développement web avec HTML, CSS, JavaScript, PHP et les bases de données. Chaque cours comprend des notions théoriques ainsi que des exercices pratiques pour vous aider à progresser rapidement.</p>
 
-    <p>
-        <a href="cours/html.html">1. Cours et TP HTML</a><br>
-        <a href="cours/css.html">2. Cours et TP CSS</a><br>
-        <a href="cours/js.html">3. Cours et TP JS</a><br>
-        <a href="cours/php.html">4. Cours et TP PHP</a><br>
-        <a href="cours/database.html">5. Cours et TP Base de données</a>
-    </p>
+    <!-- Liste des liens vers les cours -->
+    <h2>Cours et TP disponibles</h2>
+    <ul>
+        <li><a href="cours/html.html">1. Cours et TP HTML</a></li>
+        <li><a href="cours/css.html">2. Cours et TP CSS</a></li>
+        <li><a href="cours/js.html">3. Cours et TP JavaScript</a></li>
+        <li><a href="cours/php.html">4. Cours et TP PHP</a></li>
+        <li><a href="cours/database.html">5. Cours et TP Base de données</a></li>
+    </ul>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Apprentissage du Web - Tous droits réservés</p>
+    </footer>
 
 </body>
 </html>
-
