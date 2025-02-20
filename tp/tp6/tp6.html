@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP6 - Tables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f9f4; /* Fond vert clair */
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+        }
+        nav {
+            background-color: #8bc34a; /* Vert pomme */
+            overflow: hidden;
+            padding: 15px 0;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0 20px;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #7cb342; /* Un vert plus foncé au survol */
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #e8f5e9; /* Couleur de fond des en-têtes */
+        }
+        .zone-a {
+            background-color: #ffe5b4; /* Couleur pour la Zone A */
+        }
+        .zone-b {
+            background-color: #b3e0f2; /* Couleur pour la Zone B */
+        }
+        .zone-c {
+            background-color: #c2e0c6; /* Couleur pour la Zone C */
+        }
+        .logo {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+        .reference-link {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+        .info-bulle {
+            position: relative;
+        }
+        .info-bulle:hover::after {
+            content: attr(data-info);
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 5px;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+            z-index: 10;
+        }
+        table.tableau2 {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #388e3c; /* Vert foncé pour les sous-titres */
+        }
+    </style>
+</head>
+<body>
+
+<h2>Tableau 1: Vacances Scolaires</h2>
+<table class="tableau1">
+  <tr>
+    <th>Vacances</th>
+    <th class="zone-a">Zone A</th>
+    <th class="zone-b">Zone B</th>
+    <th class="zone-c">Zone C</th>
+  </tr>
+  <tr>
+    <td>Pré-rentrée des enseignants</td>
+    <td colspan="3">Rentrée scolaire des élèves</td>
+  </tr>
+  <tr>
+    <td>Vacances de la Toussaint</td>
+    <td class="zone-a">Fin des cours : samedi 21 octobre 2017<br>Reprise des cours : lundi 6 novembre 2017</td>
+    <td class="zone-b">Fin des cours : samedi 21 octobre 2017<br>Reprise des cours : lundi 6 novembre 2017</td>
+    <td class="zone-c">Fin des cours : samedi 21 octobre 2017<br>Reprise des cours : lundi 6 novembre 2017</td>
+  </tr>
+  <tr>
+    <td>Vacances de Noël</td>
+    <td class="zone-a">Fin des cours : samedi 23 décembre 2017<br>Reprise des cours : lundi 8 janvier 2018</td>
+    <td class="zone-b">Fin des cours : samedi 23 décembre 2017<br>Reprise des cours : lundi 8 janvier 2018</td>
+    <td class="zone-c">Fin des cours : samedi 23 décembre 2017<br>Reprise des cours : lundi 8 janvier 2018</td>
+  </tr>
+  <tr>
+    <td>Vacances d'hiver</td>
+    <td class="zone-a">Fin des cours : samedi 10 février 2018<br>Reprise des cours : lundi 26 février 2018</td>
+    <td class="zone-b">Fin des cours : samedi 24 février 2018<br>Reprise des cours : lundi 12 mars 2018</td>
+    <td class="zone-c">Fin des cours : samedi 17 février 2018<br>Reprise des cours : lundi 5 mars 2018</td>
+  </tr>
+  <tr>
+    <td>Vacances de printemps</td>
+    <td class="zone-a">Fin des cours : samedi 7 avril 2018<br>Reprise des cours : lundi 23 avril 2018</td>
+    <td class="zone-b">Fin des cours : samedi 24 mars 2018<br>Reprise des cours : lundi 9 avril 2018</td>
+    <td class="zone-c">Fin des cours : samedi 31 mars 2018<br>Reprise des cours : lundi 17 avril 2018</td>
+  </tr>
+  <tr>
+    <td>Vacances d'été</td>
+    <td colspan="3">Fin des cours : samedi 7 juillet 2018</td>
+  </tr>
+  <tr>
+    <td>Académies</td>
+    <td class="zone-a">Besançon, Bordeaux, Clermont-Ferrand, Dijon, Grenoble, Limoges, Lyon, Poitiers</td>
+    <td class="zone-b">Aix-Marseille, Amiens, Caen, Lille, Nancy-Metz, Nantes, Nice, Orléans-Tours, Reims, Rennes, Rouen, Strasbourg</td>
+    <td class="zone-c">Créteil, Montpellier, Paris, Toulouse, Versailles</td>
+  </tr>
+</table>
+
+<h2>Tableau 2</h2>
+<table class="tableau2">
+    <tr>
+        <th>Logo</th>
+        <th>Nom abrégé</th>
+        <th>Nom complet</th>
+        <th>Année de sortie</th>
+        <th>Site web de référence</th>
+        <th>Exemple de code</th>
+    </tr>
+    <tr>
+        <td class="logo info-bulle" data-info="Clique sur le logo affiche une autre page avec sa taille d'origine." onclick="alert('Clique sur le logo affiche une autre page avec sa taille d\'origine.')">Php</td>
+        <td>Php</td>
+        <td>...</td>
+        <td>...</td>
+        <td class="reference-link" onclick="window.open('https://www.php.net', '_blank')">...</td>
+        <td><code>&lt;?php echo 'Hello, World!'; ?&gt;</code></td>
+    </tr>
+    <!-- Ajoute d'autres lignes pour les autres langages ici -->
+</table>
+
+</body>
+</html>
