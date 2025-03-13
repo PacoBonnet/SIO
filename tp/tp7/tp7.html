@@ -14,7 +14,7 @@
       scroll-behavior: smooth;
     }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       background-color: #f0f9f4; /* Fond vert clair */
       display: flex;
       flex-direction: column;
@@ -30,11 +30,13 @@
       color: white;
       padding: 20px;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       margin-bottom: 20px;
+      border-radius: 8px;
     }
     header h1 {
       font-size: 2.5em;
+      font-weight: bold;
     }
     /* Conteneur principal */
     .container {
@@ -42,31 +44,35 @@
       max-width: 1200px;
       background: white;
       padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       margin-bottom: 20px;
+      border-radius: 12px;
     }
     /* Sommaire TP7 */
     #tp7-toc {
       margin-bottom: 20px;
-      padding: 10px;
+      padding: 15px;
       background-color: #e8f5e9; /* Couleur de fond des en-têtes */
-      border-left: 4px solid #8bc34a; /* Vert pomme */
+      border-left: 6px solid #8bc34a; /* Vert pomme */
+      border-radius: 8px;
     }
     #tp7-toc h2 {
-      font-size: 1.4em;
-      margin-bottom: 10px;
+      font-size: 1.6em;
+      margin-bottom: 15px;
       color: #8bc34a; /* Vert pomme */
     }
     #tp7-toc ul {
       list-style: none;
+      padding: 0;
     }
     #tp7-toc ul li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
     #tp7-toc ul li a {
       text-decoration: none;
       color: #388e3c; /* Vert foncé */
       transition: color 0.3s;
+      font-weight: bold;
     }
     #tp7-toc ul li a:hover {
       color: #7cb342; /* Un vert plus foncé au survol */
@@ -78,25 +84,28 @@
     .section h2 {
       background-color: #8bc34a; /* Vert pomme */
       color: white;
-      padding: 10px;
-      margin-bottom: 10px;
-      font-size: 1.5em;
+      padding: 15px;
+      margin-bottom: 15px;
+      font-size: 1.7em;
+      border-radius: 8px;
     }
     .section p {
-      padding: 10px;
-      line-height: 1.5;
+      padding: 15px;
+      line-height: 1.6;
+      text-align: left;
     }
     .exemple-code {
       background: #272822;
       color: #f8f8f2;
-      padding: 10px;
-      border-radius: 5px;
+      padding: 15px;
+      border-radius: 8px;
       overflow-x: auto;
-      margin: 10px;
+      margin: 15px 0;
     }
     a {
       color: #388e3c; /* Vert foncé */
       text-decoration: none;
+      font-weight: bold;
     }
     a:hover {
       text-decoration: underline;
@@ -105,16 +114,17 @@
     .zoning {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      border: 2px dashed #388e3c; /* Vert foncé */
-      padding: 15px;
-      margin-top: 15px;
+      gap: 15px;
+      border: 3px dashed #388e3c; /* Vert foncé */
+      padding: 20px;
+      margin-top: 20px;
       justify-content: center;
+      border-radius: 12px;
     }
     .zone {
-      min-width: 140px;
-      min-height: 70px;
-      border: 2px solid #8bc34a; /* Vert pomme */
+      min-width: 150px;
+      min-height: 80px;
+      border: 3px solid #8bc34a; /* Vert pomme */
       background-color: #e8f5e9; /* Couleur de fond des en-têtes */
       text-align: center;
       display: flex;
@@ -122,12 +132,13 @@
       justify-content: center;
       font-weight: bold;
       position: relative;
+      border-radius: 8px;
     }
     .zone span {
       display: block;
-      font-size: 0.85em;
+      font-size: 0.9em;
       font-weight: normal;
-      margin-top: 3px;
+      margin-top: 5px;
       color: #8bc34a; /* Vert pomme */
       text-align: center;
     }
@@ -137,8 +148,9 @@
       background-color: #8bc34a; /* Vert pomme */
       color: white;
       text-align: center;
-      padding: 10px;
+      padding: 15px;
       margin-top: 20px;
+      border-radius: 8px;
     }
   </style>
 </head>
