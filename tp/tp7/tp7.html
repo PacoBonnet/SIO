@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>TP7 - Zoning d'une page Web</title>
+  <style>
+    /* Réinitialisation et scroll fluide */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    /* En-tête principal */
+    header {
+      width: 100%;
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 2.5em;
+    }
+    /* Conteneur principal */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    /* Sommaire TP7 */
+    #tp7-toc {
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #ecf0f1;
+      border-left: 4px solid #2c3e50;
+    }
+    #tp7-toc h2 {
+      font-size: 1.4em;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+    #tp7-toc ul {
+      list-style: none;
+    }
+    #tp7-toc ul li {
+      margin-bottom: 8px;
+    }
+    #tp7-toc ul li a {
+      text-decoration: none;
+      color: #3498db;
+      transition: color 0.3s;
+    }
+    #tp7-toc ul li a:hover {
+      color: #2980b9;
+    }
+    /* Sections */
+    .section {
+      margin: 30px 0;
+    }
+    .section h2 {
+      background-color: #2c3e50;
+      color: white;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 1.5em;
+    }
+    .section p {
+      padding: 10px;
+      line-height: 1.5;
+    }
+    .exemple-code {
+      background: #272822;
+      color: #f8f8f2;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+      margin: 10px;
+    }
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* Zoning container */
+    .zoning {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      border: 2px dashed #3498db;
+      padding: 15px;
+      margin-top: 15px;
+      justify-content: center;
+    }
+    .zone {
+      min-width: 140px;
+      min-height: 70px;
+      border: 2px solid #2c3e50;
+      background-color: #ecf0f1;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      position: relative;
+    }
+    .zone span {
+      display: block;
+      font-size: 0.85em;
+      font-weight: normal;
+      margin-top: 3px;
+      color: #2c3e50;
+      text-align: center;
+    }
+    /* FOOTER */
+    footer {
+      width: 100%;
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- En-tête principal -->
+  <header>
+    <h1>TP WEB</h1>
+  </header>
+  
+  <div class="container">
+    <!-- Sommaire TP7 -->
+    <nav id="tp7-toc">
+      <h2>Sommaire TP7</h2>
+      <ul id="tp7-toc-list">Chargement du sommaire...</ul>
+    </nav>
+    
+    <!-- EXERCICE 1 -->
+    <section id="ex1" class="section">
+      <h2>Exercice 1 : Zoning à partir du lien</h2>
+      <p>
+        À partir du lien : 
+        <a href="http://j-willette.developpez.com/tutoriels/html/les-bases-du-html/?page=page_1" target="_blank">
+          http://j-willette.developpez.com/tutoriels/html/les-bases-du-html/?page=page_1
+        </a>
+        <br>
+        • Utiliser l'inspecteur d'élément pour représenter sous forme de "boîte" le zoning de la page.  
+        • Précisez pour chaque zone la balise utilisée.  
+        • Pour la partie article, notez l'architecture du site.
+      </p>
+      <p>Exemple de zoning (dans l'esprit de la page) :</p>
+      <div class="zoning">
+        <div class="zone">HEADER<br><span>&lt;header&gt;</span></div>
+        <div class="zone">MENU 1<br><span>&lt;nav&gt;</span></div>
+        <div class="zone">RECHERCHE<br><span>&lt;form&gt;</span></div>
+        <div class="zone">LOGO/PUB<br><span>&lt;div&gt;</span></div>
+        <div class="zone">MENU 2<br><span>&lt;nav&gt;</span></div>
+        <div class="zone">ARTICLE<br><span>&lt;article&gt;</span></div>
+        <div class="zone">FOOTER<br><span>&lt;footer&gt;</span></div>
+      </div>
+    </section>
+    
+    <!-- EXERCICE 2 -->
+    <section id="ex2" class="section">
+      <h2>Exercice 2 : Reproduire le zoning de la page ci-dessous</h2>
+      <p>
+        On ne s'intéresse pas au contenu, mais uniquement à la structure (le zoning).  
+        Chaque page doit garder ses proportions.  
+        <br>Voici le code HTML donné dans l'énoncé, réécrit avec colorisation. Créez un fichier CSS séparé si souhaité, 
+        mais ci-dessous nous vous montrons une version "inline" pour illustrer l'affichage.  
+      </p>
+      <div class="exemple-code">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&nbsp;&nbsp;&lt;head&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;TODO supply a title&lt;/title&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.entete { border:1px solid; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.menu1 { border:1px solid blue; height:30px; display:inline-block; float:left; margin:1px; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.recherche { border:1px solid red; height:30px; float:right; margin:1px; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.cadreLogoPub { border:1px solid blueviolet; clear:left; margin:1px; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.logo { display:inline-block; border:1px solid chocolate; margin:1px; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.emploi { display:inline-block; border:1px solid chartreuse; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.main { margin-top:2px; margin-bottom:2px; background-color:cadetblue; height:400px; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.pdp { margin-top:2px; margin-bottom:2px; background-color:chartreuse; height:50px; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/style&gt;<br>
+&nbsp;&nbsp;&lt;/head&gt;<br>
+&nbsp;&nbsp;&lt;body&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;header class="entete"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nav class="menu1"&gt;ZONE DE MENU 1&lt;/nav&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;form class="recherche"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" /&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="rechercher" /&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/form&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="cadreLogoPub"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="logo"&gt;&lt;img src="images/arrow.png" alt="logo" /&gt;&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="emploi"&gt;CADRE EMPLOI&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nav&gt;ZONE DE MENU 2&lt;/nav&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/header&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;section class="main"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;article&gt;ARTICLE&lt;/article&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/section&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;footer class="pdp"&gt;PIED DE PAGE&lt;/footer&gt;<br>
+&nbsp;&nbsp;&lt;/body&gt;<br>
+&lt;/html&gt;
+      </div>
+      <p>Le zoning obtenu (en gardant les mêmes proportions) peut être illustré par :</p>
+      <div class="zoning" style="justify-content:flex-start;">
+        <div class="zone" style="width: 90%; height:50px; background:#fafafa; border:2px solid #000;">
+          ENTETE<br><span>.entete &lt;header&gt;</span>
+        </div>
+        <div class="zone" style="width: 25%; height:30px; border-color:blue;">
+          MENU 1<br><span>.menu1 &lt;nav&gt;</span>
+        </div>
+        <div class="zone" style="width: 25%; height:30px; border-color:red;">
+          RECHERCHE<br><span>.recherche &lt;form&gt;</span>
+        </div>
+        <div class="zone" style="width: 90%; height:60px; border-color:blueviolet;">
+          LOGO / PUB<br><span>.cadreLogoPub &lt;div&gt;</span>
+        </div>
+        <div class="zone" style="width: 90%; height:30px; border-color:#aaa;">
+          MENU 2<br><span>&lt;nav&gt;</span>
+        </div>
+        <div class="zone" style="width: 90%; height:300px; background:cadetblue;">
+          ARTICLE<br><span>.main &lt;section&gt; &lt;article&gt;</span>
+        </div>
+        <div class="zone" style="width: 90%; height:50px; background:chartreuse;">
+          PIED DE PAGE<br><span>.pdp &lt;footer&gt;</span>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <footer>
+    <p>Page TP7 réalisée par Hugo Payet.</p>
+  </footer>
+  
+  <!-- Script pour générer automatiquement le sommaire des exercices TP7 -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var tocList = document.getElementById("tp7-toc-list");
+      var sections = document.querySelectorAll("section[id^='ex']");
+      tocList.innerHTML = "";
+      sections.forEach(function(section) {
+        var li = document.createElement("li");
+        var h2 = section.querySelector("h2");
+        if (h2) {
+          var a = document.createElement("a");
+          a.textContent = h2.textContent;
+          a.href = "#" + section.id;
+          li.appendChild(a);
+          tocList.appendChild(li);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
