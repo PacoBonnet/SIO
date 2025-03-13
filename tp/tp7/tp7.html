@@ -32,7 +32,11 @@
       text-align: center;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       margin-bottom: 20px;
-      border-radius: 8px;
+      border-radius: 12px;
+      transition: background-color 0.3s;
+    }
+    header:hover {
+      background-color: #7cb342;
     }
     header h1 {
       font-size: 2.5em;
@@ -47,6 +51,10 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       margin-bottom: 20px;
       border-radius: 12px;
+      transition: box-shadow 0.3s;
+    }
+    .container:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
     }
     /* Sommaire TP7 */
     #tp7-toc {
@@ -55,6 +63,10 @@
       background-color: #e8f5e9; /* Couleur de fond des en-têtes */
       border-left: 6px solid #8bc34a; /* Vert pomme */
       border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+    #tp7-toc:hover {
+      background-color: #dcedc8;
     }
     #tp7-toc h2 {
       font-size: 1.6em;
@@ -80,6 +92,10 @@
     /* Sections */
     .section {
       margin: 30px 0;
+      transition: transform 0.3s;
+    }
+    .section:hover {
+      transform: scale(1.02);
     }
     .section h2 {
       background-color: #8bc34a; /* Vert pomme */
@@ -101,13 +117,19 @@
       border-radius: 8px;
       overflow-x: auto;
       margin: 15px 0;
+      transition: background-color 0.3s;
+    }
+    .exemple-code:hover {
+      background-color: #303030;
     }
     a {
       color: #388e3c; /* Vert foncé */
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
     }
     a:hover {
+      color: #7cb342;
       text-decoration: underline;
     }
     /* Zoning container */
@@ -120,6 +142,10 @@
       margin-top: 20px;
       justify-content: center;
       border-radius: 12px;
+      transition: border-color 0.3s;
+    }
+    .zoning:hover {
+      border-color: #7cb342;
     }
     .zone {
       min-width: 150px;
@@ -133,6 +159,11 @@
       font-weight: bold;
       position: relative;
       border-radius: 8px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .zone:hover {
+      background-color: #dcedc8;
+      transform: scale(1.05);
     }
     .zone span {
       display: block;
@@ -151,6 +182,10 @@
       padding: 15px;
       margin-top: 20px;
       border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+    footer:hover {
+      background-color: #7cb342;
     }
   </style>
 </head>
@@ -268,9 +303,6 @@
     </section>
   </div>
 
-  <footer>
-    <p>Page TP7 réalisée par Hugo Payet.</p>
-  </footer>
 
   <!-- Script pour générer automatiquement le sommaire des exercices TP7 -->
   <script>
