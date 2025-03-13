@@ -2,9 +2,8 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>TP7 - Zoning d'une page Web</title>
+  <title>TP7 - Zoning Web</title>
   <style>
-    /* Réinitialisation et scroll fluide */
     * {
       margin: 0;
       padding: 0;
@@ -15,7 +14,7 @@
     }
     body {
       font-family: 'Arial', sans-serif;
-      background-color: #f0f9f4; /* Fond vert clair */
+      background-color: #f0f9f4;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -23,10 +22,9 @@
       color: #333;
       text-align: center;
     }
-    /* En-tête principal */
     header {
       width: 100%;
-      background-color: #8bc34a; /* Vert pomme */
+      background-color: #8bc34a;
       color: white;
       padding: 20px;
       text-align: center;
@@ -42,7 +40,6 @@
       font-size: 2.5em;
       font-weight: bold;
     }
-    /* Conteneur principal */
     .container {
       width: 90%;
       max-width: 1200px;
@@ -56,12 +53,11 @@
     .container:hover {
       box-shadow: 0 8px 24px rgba(0,0,0,0.15);
     }
-    /* Sommaire TP7 */
     #tp7-toc {
       margin-bottom: 20px;
       padding: 15px;
-      background-color: #e8f5e9; /* Couleur de fond des en-têtes */
-      border-left: 6px solid #8bc34a; /* Vert pomme */
+      background-color: #e8f5e9;
+      border-left: 6px solid #8bc34a;
       border-radius: 8px;
       transition: background-color 0.3s;
     }
@@ -71,7 +67,7 @@
     #tp7-toc h2 {
       font-size: 1.6em;
       margin-bottom: 15px;
-      color: #8bc34a; /* Vert pomme */
+      color: #8bc34a;
     }
     #tp7-toc ul {
       list-style: none;
@@ -82,14 +78,13 @@
     }
     #tp7-toc ul li a {
       text-decoration: none;
-      color: #388e3c; /* Vert foncé */
+      color: #388e3c;
       transition: color 0.3s;
       font-weight: bold;
     }
     #tp7-toc ul li a:hover {
-      color: #7cb342; /* Un vert plus foncé au survol */
+      color: #7cb342;
     }
-    /* Sections */
     .section {
       margin: 30px 0;
       transition: transform 0.3s;
@@ -98,7 +93,7 @@
       transform: scale(1.02);
     }
     .section h2 {
-      background-color: #8bc34a; /* Vert pomme */
+      background-color: #8bc34a;
       color: white;
       padding: 15px;
       margin-bottom: 15px;
@@ -123,7 +118,7 @@
       background-color: #303030;
     }
     a {
-      color: #388e3c; /* Vert foncé */
+      color: #388e3c;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
@@ -132,12 +127,11 @@
       color: #7cb342;
       text-decoration: underline;
     }
-    /* Zoning container */
     .zoning {
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
-      border: 3px dashed #388e3c; /* Vert foncé */
+      border: 3px dashed #388e3c;
       padding: 20px;
       margin-top: 20px;
       justify-content: center;
@@ -150,8 +144,8 @@
     .zone {
       min-width: 150px;
       min-height: 80px;
-      border: 3px solid #8bc34a; /* Vert pomme */
-      background-color: #e8f5e9; /* Couleur de fond des en-têtes */
+      border: 3px solid #8bc34a;
+      background-color: #e8f5e9;
       text-align: center;
       display: flex;
       align-items: center;
@@ -170,13 +164,12 @@
       font-size: 0.9em;
       font-weight: normal;
       margin-top: 5px;
-      color: #8bc34a; /* Vert pomme */
+      color: #8bc34a;
       text-align: center;
     }
-    /* FOOTER */
     footer {
       width: 100%;
-      background-color: #8bc34a; /* Vert pomme */
+      background-color: #8bc34a;
       color: white;
       text-align: center;
       padding: 15px;
@@ -190,32 +183,28 @@
   </style>
 </head>
 <body>
-  <!-- En-tête principal -->
   <header>
     <h1>TP WEB</h1>
   </header>
 
   <div class="container">
-    <!-- Sommaire TP7 -->
     <nav id="tp7-toc">
-      <h2>Sommaire TP7</h2>
-      <ul id="tp7-toc-list">Chargement du sommaire...</ul>
+      <h2>Sommaire</h2>
+      <ul id="tp7-toc-list">Chargement...</ul>
     </nav>
 
-    <!-- EXERCICE 1 -->
     <section id="ex1" class="section">
-      <h2>Exercice 1 : Zoning à partir du lien</h2>
+      <h2>Exercice 1 : Zoning</h2>
       <p>
-        À partir du lien :
+        Utilisez l'inspecteur pour représenter le zoning de la page :
         <a href="http://j-willette.developpez.com/tutoriels/html/les-bases-du-html/?page=page_1" target="_blank">
-          http://j-willette.developpez.com/tutoriels/html/les-bases-du-html/?page=page_1
+          Lien
         </a>
         <br>
-        • Utiliser l'inspecteur d'élément pour représenter sous forme de "boîte" le zoning de la page.
-        • Précisez pour chaque zone la balise utilisée.
-        • Pour la partie article, notez l'architecture du site.
+        • Précisez les balises.
+        • Notez l'architecture de l'article.
       </p>
-      <p>Exemple de zoning (dans l'esprit de la page) :</p>
+      <p>Exemple de zoning :</p>
       <div class="zoning">
         <div class="zone">HEADER<br><span>&lt;header&gt;</span></div>
         <div class="zone">MENU 1<br><span>&lt;nav&gt;</span></div>
@@ -227,14 +216,11 @@
       </div>
     </section>
 
-    <!-- EXERCICE 2 -->
     <section id="ex2" class="section">
-      <h2>Exercice 2 : Reproduire le zoning de la page ci-dessous</h2>
+      <h2>Exercice 2 : Reproduire le zoning</h2>
       <p>
-        On ne s'intéresse pas au contenu, mais uniquement à la structure (le zoning).
-        Chaque page doit garder ses proportions.
-        <br>Voici le code HTML donné dans l'énoncé, réécrit avec colorisation. Créez un fichier CSS séparé si souhaité,
-        mais ci-dessous nous vous montrons une version "inline" pour illustrer l'affichage.
+        Reproduisez le zoning sans contenu.
+        <br>Code HTML donné :
       </p>
       <div class="exemple-code">
 &lt;!DOCTYPE html&gt;<br>
@@ -257,7 +243,7 @@
 &nbsp;&nbsp;&lt;body&gt;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;header class="entete"&gt;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nav class="menu1"&gt;ZONE DE MENU 1&lt;/nav&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nav class="menu1"&gt;MENU 1&lt;/nav&gt;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;form class="recherche"&gt;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" /&gt;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="rechercher" /&gt;<br>
@@ -265,9 +251,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="cadreLogoPub"&gt;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="logo"&gt;&lt;img src="images/arrow.png" alt="logo" /&gt;&lt;/div&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="emploi"&gt;CADRE EMPLOI&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="emploi"&gt;EMPLOI&lt;/div&gt;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nav&gt;ZONE DE MENU 2&lt;/nav&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;nav&gt;MENU 2&lt;/nav&gt;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/header&gt;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;section class="main"&gt;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;article&gt;ARTICLE&lt;/article&gt;<br>
@@ -276,7 +262,7 @@
 &nbsp;&nbsp;&lt;/body&gt;<br>
 &lt;/html&gt;
       </div>
-      <p>Le zoning obtenu (en gardant les mêmes proportions) peut être illustré par :</p>
+      <p>Zoning obtenu :</p>
       <div class="zoning" style="justify-content:flex-start;">
         <div class="zone" style="width: 90%; height:50px; background:#fafafa; border:2px solid #000;">
           ENTETE<br><span>.entete &lt;header&gt;</span>
@@ -303,8 +289,6 @@
     </section>
   </div>
 
-
-  <!-- Script pour générer automatiquement le sommaire des exercices TP7 -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       var tocList = document.getElementById("tp7-toc-list");
