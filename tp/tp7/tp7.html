@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP7 - Zoning Web</title>
+    <title>TP7 - Zoning en CSS</title>
     <style>
         * {
             margin: 0;
@@ -19,130 +19,88 @@
             color: #333;
             text-align: center;
         }
-        nav {
+        .navbar {
             background-color: #8bc34a;
-            overflow: hidden;
-            padding: 15px 0;
-        }
-        nav a {
-            color: white;
-            padding: 10px 15px;
-            text-decoration: none;
-            display: inline-block;
-            margin: 0 10px;
-            font-size: 18px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        nav a:hover {
-            background-color: #7cb342;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            background: white;
-            padding: 20px;
-            margin: 20px auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .section {
-            margin: 30px 0;
-            transition: transform 0.3s;
-        }
-        .section:hover {
-            transform: scale(1.02);
-        }
-        .section h2 {
-            background-color: #8bc34a;
-            color: white;
-            padding: 15px;
-            margin-bottom: 15px;
-            font-size: 1.7em;
-            border-radius: 8px;
-        }
-        .zoning {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            border: 3px dashed #388e3c;
-            padding: 20px;
-            margin-top: 20px;
-            justify-content: center;
-            border-radius: 12px;
-        }
-        .zone {
-            min-width: 150px;
-            min-height: 80px;
-            border: 3px solid #8bc34a;
-            background-color: #e8f5e9;
+            padding: 10px 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            border-radius: 8px;
-            transition: transform 0.3s;
+            gap: 20px;
         }
-        .zone:hover {
-            transform: scale(1.05);
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #7cb342;
+        }
+        .navbar img {
+            width: 50px;
+            height: 50px;
+        }
+        h1 {
+            margin-top: 30px;
+            font-size: 2.5em;
+            color: #388e3c;
+        }
+        .intro {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .tp7-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .tp7-container ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .tp7-container ul li {
+            margin: 10px 0;
+        }
+        .tp7-container ul li a {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #388e3c;
+            transition: color 0.3s;
+        }
+        .tp7-container ul li a:hover {
+            color: #7cb342;
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <a href="exercice1.html">Exercice 1</a>
-        <a href="exercice2.html">Exercice 2</a>
-        <a href="exercice3.html">Exercice 3</a>
-        <a href="exercice4.html">Exercice 4</a>
-        <a href="exercice5.html">Exercice 5</a>
-        <a href="exercice6.html">Exercice 6</a>
-        <a href="exercice7.html">Exercice 7</a>
-        <a href="exercice8.html">Exercice 8</a>
-    </nav>
+    <div class="navbar">
+        <img src="../../Image/home.png" alt="Accueil">
+        <a href="../../index.html">Accueil</a>
+        <a href="../cours_HTML/TP/TP3.html">TP3</a>
+        <a href="../../TP4.html">TP4</a>
+        <a href="../TP5/tempo.html">TP5</a>
+    </div>
 
-    <div class="container">
-        <section id="ex1" class="section">
-            <h2>Exercice 1 : Zoning</h2>
-            <p>Utilisez l'inspecteur pour représenter le zoning de la page :</p>
-            <div class="zoning">
-                <div class="zone">HEADER<br><span>&lt;header&gt;</span></div>
-                <div class="zone">MENU 1<br><span>&lt;nav&gt;</span></div>
-                <div class="zone">RECHERCHE<br><span>&lt;form&gt;</span></div>
-                <div class="zone">LOGO/PUB<br><span>&lt;div&gt;</span></div>
-                <div class="zone">MENU 2<br><span>&lt;nav&gt;</span></div>
-                <div class="zone">ARTICLE<br><span>&lt;article&gt;</span></div>
-                <div class="zone">FOOTER<br><span>&lt;footer&gt;</span></div>
-            </div>
-        </section>
+    <h1>TP7 - Zoning en CSS</h1>
+    <p class="intro">Retrouvez ici les exercices du TP7 sur le zoning des pages web.</p>
 
-        <section id="ex2" class="section">
-            <h2>Exercice 2 : Reproduire le zoning</h2>
-            <p>Reproduisez le zoning sans contenu.</p>
-            <div class="zoning">
-                <div class="zone" style="width: 90%; height:50px;">
-                    ENTETE<br><span>.entete &lt;header&gt;</span>
-                </div>
-                <div class="zone" style="width: 25%; height:30px; border-color:blue;">
-                    MENU 1<br><span>.menu1 &lt;nav&gt;</span>
-                </div>
-                <div class="zone" style="width: 25%; height:30px; border-color:red;">
-                    RECHERCHE<br><span>.recherche &lt;form&gt;</span>
-                </div>
-                <div class="zone" style="width: 90%; height:60px; border-color:blueviolet;">
-                    LOGO / PUB<br><span>.cadreLogoPub &lt;div&gt;</span>
-                </div>
-                <div class="zone" style="width: 90%; height:30px; border-color:#aaa;">
-                    MENU 2<br><span>&lt;nav&gt;</span>
-                </div>
-                <div class="zone" style="width: 90%; height:300px; background:cadetblue;">
-                    ARTICLE<br><span>.main &lt;section&gt; &lt;article&gt;</span>
-                </div>
-                <div class="zone" style="width: 90%; height:50px; background:chartreuse;">
-                    PIED DE PAGE<br><span>.pdp &lt;footer&gt;</span>
-                </div>
-            </div>
-        </section>
+    <div class="tp7-container">
+        <ul>
+            <li><a href="zone/zone1.html">Exercice 2.1 - Zoning 1</a></li>
+            <li><a href="zone/zone2.html">Exercice 2.2 - Zoning 2</a></li>
+            <li><a href="zone/zone3.html">Exercice 2.3 - Zoning 3</a></li>
+            <li><a href="zone/zone4.html">Exercice 2.4 - Zoning 4</a></li>
+            <li><a href="zone/zone5.html">Exercice 2.5 - Zoning 5</a></li>
+            <li><a href="zone/zone6.html">Exercice 2.6 - Zoning 6</a></li>
+            <li><a href="zone/zone7.html">Exercice 2.7 - Zoning 7</a></li>
+        </ul>
     </div>
 
 </body>
