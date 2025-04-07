@@ -3,105 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP7 - Zoning en CSS</title>
+    <title>TP1</title>
     <style>
-        * {
+        /* Définir la couleur de fond et la police générale */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f9f4; /* Fond vert clair */
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f9f4;
-            color: #333;
+
+        /* Style du menu */
+        nav {
+            background-color: #8bc34a; /* Vert pomme */
+            padding: 15px;
             text-align: center;
         }
-        .navbar {
-            background-color: #8bc34a;
-            padding: 10px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-        }
-        .navbar a {
+
+        /* Style des liens */
+        nav a {
             color: white;
             text-decoration: none;
+            margin: 0 20px;
             font-size: 18px;
-            padding: 10px;
+            padding: 10px 15px;
             border-radius: 5px;
             transition: background-color 0.3s;
         }
-        .navbar a:hover {
-            background-color: #7cb342;
+
+        /* Effet au survol des liens */
+        nav a:hover {
+            background-color: #7cb342; /* Un vert plus foncé au survol */
         }
-        .navbar img {
-            width: 50px;
-            height: 50px;
-        }
+
+        /* Style des titres */
         h1 {
-            margin-top: 30px;
-            font-size: 2.5em;
-            color: #388e3c;
+            text-align: center;
+            color: #388e3c; /* Vert foncé */
+            margin-top: 40px;
         }
-        .intro {
-            font-size: 1.2em;
-            margin: 20px 0;
+
+        h2 {
+            color: #388e3c; /* Vert foncé pour les sous-titres */
         }
-        .tp7-container {
-            width: 80%;
-            max-width: 800px;
-            margin: 30px auto;
-            background-color: white;
-            padding: 20px;
+
+        /* Style des sections */
+        section {
+            margin: 30px;
+            padding: 15px;
+            background-color: #ffffff;
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .tp7-container ul {
-            list-style-type: none;
-            padding: 0;
+
+        /* Style des paragraphes et des codes */
+        p {
+            font-size: 16px;
+            line-height: 1.6;
         }
-        .tp7-container ul li {
-            margin: 10px 0;
-        }
-        .tp7-container ul li a {
-            text-decoration: none;
-            font-size: 1.5em;
-            color: #388e3c;
-            transition: color 0.3s;
-        }
-        .tp7-container ul li a:hover {
-            color: #7cb342;
+
+        code {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #e8f5e9;
+            padding: 5px;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
 
-    <div class="navbar">
-        <img src="../../Image/home.png" alt="Accueil">
-        <a href="../../index.html">Accueil</a>
-        <a href="../cours_HTML/TP/TP3.html">TP3</a>
-        <a href="../../TP4.html">TP4</a>
-        <a href="../TP5/tempo.html">TP5</a>
-    </div>
+    <nav>
+        <a href="https://pacobonnet.github.io/SIO/main.html">Menu</a>
+        <a href="https://pacobonnet.github.io/SIO/tp/tp1/tp1.html">TP1</a>
+        <a href="https://pacobonnet.github.io/SIO/tp/tp3/tp3.html">TP3</a>
+        <a href="https://pacobonnet.github.io/SIO/tp/tp4/tp4.html">TP4</a>
+        <a href="https://pacobonnet.github.io/SIO/tp/tp5/tp5.html">TP5</a>
+        <a href="https://pacobonnet.github.io/SIO/tp/tp6/tp6.html">TP6</a>
+        <a href="https://pacobonnet.github.io/SIO/tp/tp7/tp7.html">TP7</a>
+        <a href="https://pacobonnet.github.io/SIO/tp/tp8/tp8.html">TP8</a>
+        <a href="https://pacobonnet.github.io/SIO/tp/tp9/tp9.html">TP9</a>
+    </nav>
+    
+    <h1>TP1</h1>
 
-    <h1>TP7 - Zoning en CSS</h1>
-    <p class="intro">Retrouvez ici les exercices du TP7 sur le zoning des pages web.</p>
+    <section>
+        <h2># Base</h2>
+        <p><code>&lt;html&gt;</code> structure principale d'une page web</p>
+        <p><code>&lt;head&gt;</code> contient les métadonnées des liens vers les styles/scripts</p>
+        <p><code>&lt;title&gt;</code> définit le titre dans l'onglet du navigateur</p>
+        <p><code>&lt;body&gt;</code> contient le contenu visible du site</p>
+    </section>
 
-    <div class="tp7-container">
-        <ul>
-            <li><a href="zone/zone1.html">Exercice 2.1 - Zoning 1</a></li>
-            <li><a href="zone/zone2.html">Exercice 2.2 - Zoning 2</a></li>
-            <li><a href="zone/zone3.html">Exercice 2.3 - Zoning 3</a></li>
-            <li><a href="zone/zone4.html">Exercice 2.4 - Zoning 4</a></li>
-            <li><a href="zone/zone5.html">Exercice 2.5 - Zoning 5</a></li>
-            <li><a href="zone/zone6.html">Exercice 2.6 - Zoning 6</a></li>
-            <li><a href="zone/zone7.html">Exercice 2.7 - Zoning 7</a></li>
-        </ul>
-    </div>
+    <section>
+        <h2># Texte</h2>
+        <p><code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code>: titre le plus important</p>
+        <p><code>&lt;p&gt;</code>: paragraphe</p>
+        <p><code>&lt;br&gt;</code>: retour à la ligne</p>
+        <p><code>&lt;hr&gt;</code>: ligne horizontale</p>
+        <p><code>&lt;strong&gt;</code>: texte en gras</p>
+        <p><code>&lt;em&gt;</code>: texte en italique</p>
+        <p><code>&lt;span&gt;</code>: conteneur</p>
+    </section>
+
+    <section>
+        <h2># Liens / Médias</h2>
+        <p><code>&lt;a&gt;</code>: lien hypertexte</p>
+        <p><code>&lt;img&gt;</code>: image</p>
+        <p><code>&lt;video&gt;</code>: vidéo</p>
+        <p><code>&lt;audio&gt;</code>: audio</p>
+        <p><code>&lt;source&gt;</code>: source pour vidéo/audio</p>
+        <p><code>&lt;iframe&gt;</code>: intégration de contenu externe</p>
+    </section>
+
+    <section>
+        <h2># Liste</h2>
+        <p><code>&lt;ul&gt;</code>: liste non ordonnée</p>
+        <p><code>&lt;ol&gt;</code>: liste ordonnée</p>
+        <p><code>&lt;li&gt;</code>: élément de liste</p>
+    </section>
+
+    <section>
+        <h2># Tableaux</h2>
+        <p><code>&lt;table&gt;</code>: tableau</p>
+        <p><code>&lt;tr&gt;</code>: ligne de tableau</p>
+        <p><code>&lt;th&gt;</code>: cellule d'en-tête</p>
+        <p><code>&lt;td&gt;</code>: cellule standard</p>
+    </section>
 
 </body>
 </html>
