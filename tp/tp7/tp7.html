@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP1</title>
+    <title>TP7 - Zoning en CSS</title>
     <style>
         /* Définir la couleur de fond et la police générale */
         body {
@@ -83,51 +83,66 @@
         <a href="https://pacobonnet.github.io/SIO/tp/tp8/tp8.html">TP8</a>
         <a href="https://pacobonnet.github.io/SIO/tp/tp9/tp9.html">TP9</a>
     </nav>
-    
-    <h1>TP1</h1>
+
+    <h1>TP7 - Zoning en CSS</h1>
+    <p class="intro">Retrouvez ici les exercices du TP7 sur le zoning des pages web.</p>
 
     <section>
-        <h2># Base</h2>
-        <p><code>&lt;html&gt;</code> structure principale d'une page web</p>
-        <p><code>&lt;head&gt;</code> contient les métadonnées des liens vers les styles/scripts</p>
-        <p><code>&lt;title&gt;</code> définit le titre dans l'onglet du navigateur</p>
-        <p><code>&lt;body&gt;</code> contient le contenu visible du site</p>
+        <h2>Exercice 1 : Zoning de la page</h2>
+        <p>Utilisez l'inspecteur pour représenter le zoning de la page :</p>
+        <ul>
+            <li><strong>HEADER</strong> : <code>&lt;header&gt;</code></li>
+            <li><strong>MENU 1</strong> : <code>&lt;nav&gt;</code></li>
+            <li><strong>RECHERCHE</strong> : <code>&lt;form&gt;</code></li>
+            <li><strong>LOGO / PUB</strong> : <code>&lt;div&gt;</code></li>
+            <li><strong>MENU 2</strong> : <code>&lt;nav&gt;</code></li>
+            <li><strong>ARTICLE</strong> : <code>&lt;article&gt;</code></li>
+            <li><strong>FOOTER</strong> : <code>&lt;footer&gt;</code></li>
+        </ul>
     </section>
 
     <section>
-        <h2># Texte</h2>
-        <p><code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code>: titre le plus important</p>
-        <p><code>&lt;p&gt;</code>: paragraphe</p>
-        <p><code>&lt;br&gt;</code>: retour à la ligne</p>
-        <p><code>&lt;hr&gt;</code>: ligne horizontale</p>
-        <p><code>&lt;strong&gt;</code>: texte en gras</p>
-        <p><code>&lt;em&gt;</code>: texte en italique</p>
-        <p><code>&lt;span&gt;</code>: conteneur</p>
+        <h2>Exercice 2 : Reproduire le zoning sans contenu</h2>
+        <p>Reproduisez le zoning sans contenu réel mais avec la structure HTML appropriée. Exemple :</p>
+        <ul>
+            <li><strong>ENTETE</strong> : <code>&lt;header&gt;</code></li>
+            <li><strong>MENU 1</strong> : <code>&lt;nav&gt;</code></li>
+            <li><strong>RECHERCHE</strong> : <code>&lt;form&gt;</code></li>
+            <li><strong>LOGO / PUB</strong> : <code>&lt;div&gt;</code></li>
+            <li><strong>MENU 2</strong> : <code>&lt;nav&gt;</code></li>
+            <li><strong>ARTICLE</strong> : <code>&lt;article&gt;</code></li>
+            <li><strong>FOOTER</strong> : <code>&lt;footer&gt;</code></li>
+        </ul>
     </section>
 
     <section>
-        <h2># Liens / Médias</h2>
-        <p><code>&lt;a&gt;</code>: lien hypertexte</p>
-        <p><code>&lt;img&gt;</code>: image</p>
-        <p><code>&lt;video&gt;</code>: vidéo</p>
-        <p><code>&lt;audio&gt;</code>: audio</p>
-        <p><code>&lt;source&gt;</code>: source pour vidéo/audio</p>
-        <p><code>&lt;iframe&gt;</code>: intégration de contenu externe</p>
+        <h2>Exercice 3 : Zoning avec une grille CSS</h2>
+        <p>Reproduisez le zoning avec une grille CSS pour organiser les différentes sections de manière responsive.</p>
+        <ul>
+            <li><strong>ZONE 1</strong> : <code>&lt;section&gt;</code></li>
+            <li><strong>ZONE 2</strong> : <code>&lt;section&gt;</code></li>
+            <li><strong>ZONE 3</strong> : <code>&lt;section&gt;</code></li>
+            <li><strong>ZONE 4</strong> : <code>&lt;section&gt;</code></li>
+        </ul>
     </section>
 
     <section>
-        <h2># Liste</h2>
-        <p><code>&lt;ul&gt;</code>: liste non ordonnée</p>
-        <p><code>&lt;ol&gt;</code>: liste ordonnée</p>
-        <p><code>&lt;li&gt;</code>: élément de liste</p>
+        <h2>Exercice 4 : Intégration d'images et médias</h2>
+        <p>Ajouter des éléments multimédias (images, vidéos, etc.) dans les différentes zones pour tester l'intégration.</p>
+        <ul>
+            <li><strong>IMAGE</strong> : <code>&lt;img&gt;</code></li>
+            <li><strong>VIDÉO</strong> : <code>&lt;video&gt;</code></li>
+            <li><strong>AUDIO</strong> : <code>&lt;audio&gt;</code></li>
+        </ul>
     </section>
 
     <section>
-        <h2># Tableaux</h2>
-        <p><code>&lt;table&gt;</code>: tableau</p>
-        <p><code>&lt;tr&gt;</code>: ligne de tableau</p>
-        <p><code>&lt;th&gt;</code>: cellule d'en-tête</p>
-        <p><code>&lt;td&gt;</code>: cellule standard</p>
+        <h2>Exercice 5 : Flexbox et Alignement</h2>
+        <p>Utilisez <code>flexbox</code> pour aligner les éléments du zoning horizontalement et verticalement.</p>
+        <ul>
+            <li><strong>Alignement de l'entête</strong> : <code>flex</code></li>
+            <li><strong>Alignement des zones</strong> : <code>justify-content: space-between</code></li>
+        </ul>
     </section>
 
 </body>
